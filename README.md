@@ -1,73 +1,40 @@
-# React + TypeScript + Vite
+# React Auth Challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Desafio de autenticação em ReactJS utilizando **TypeScript**, **Vite**, **TailwindCSS**, **shadcn/ui** e **Axios (com interceptors)**.
 
-Currently, two official plugins are available:
+## 🔑 Funcionalidades
+- Página de **Login** com validação básica.
+- Armazenamento de tokens em `localStorage` (login persistente).
+- **Rotas protegidas** usando React Router.
+- Página **Home** exibindo nome, email e avatar do usuário logado.
+- **Logout** limpa tokens e redireciona para login.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Stack
+- [React + Vite](https://vitejs.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [shadcn/ui](https://ui.shadcn.com/)
+- [Axios](https://axios-http.com/) (com interceptors)
+- [React Router](https://reactrouter.com/)
+- [Vitest + Testing Library](https://vitest.dev/) (para testes)
 
-## React Compiler
+## 🚀 Como rodar localmente
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/react-auth-challenge.git
+   cd react-auth-challenge
+2. Instale dependências:
+   ```bash
+   npm install
+3. Crie um arquivo .env
+   ```bash
+   VITE_API_URL=https://api.homologation.cliqdrive.com.br
+4. Rode o projeto:
+   ```bash
+   npm run dev
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Crendenciais de teste
+```bash
+  email: cliente@youdrive.com
+  password: password
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
