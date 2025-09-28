@@ -15,8 +15,6 @@ Desafio de autenticação em ReactJS utilizando **TypeScript**, **Vite**, **Tail
 - [TailwindCSS](https://tailwindcss.com/)
 - [shadcn/ui](https://ui.shadcn.com/)
 - [Axios](https://axios-http.com/) (com interceptors)
-- [React Router](https://reactrouter.com/)
-- [Vitest + Testing Library](https://vitest.dev/) (para testes)
 
 ## 🚀 Como rodar localmente
 1. Clone o repositório:
